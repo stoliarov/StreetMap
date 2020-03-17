@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" generator="Osmosis 0.41-44-g988e1a9">
+    <bounds minlon="74.90208" minlat="53.16822" maxlon="85.25933" maxlat="57.43014" origin="http://www.openstreetmap.org/api/0.6"/>
+    <node id="27503928" version="36" timestamp="2015-01-29T11:42:06Z" uid="54441" user="SMP" changeset="28484183" lat="55.0282215" lon="82.9234476">
+        <tag k="addr:country" v="RU"/>
+        <tag k="name:sl" v="Novosibirsk"/>
+        <tag k="name:uk" v="Новосибірськ"/>
+        <tag k="note" v="why capital=yes? see http://wiki.openstreetmap.org/wiki/Proposed_features/capital#Combination_with_admin_level"/>
+        <tag k="place" v="city"/>
+        <tag k="population" v="1547910"/>
+        <tag k="population:date" v="2014-01-01"/>
+        <tag k="wikipedia" v="ru:Новосибирск"/>
+    </node>
+    <node id="32521222" version="2" timestamp="2009-05-02T14:34:25Z" uid="17497" user="katpatuka" changeset="1048654" lat="54.7724042" lon="83.1009863"/>
+    <node id="81445841" version="3" timestamp="2013-08-02T23:56:10Z" uid="133332" user="AMDmi3" changeset="17198430" lat="55.1630961" lon="82.8301454"/>
+    <node id="81445843" version="3" timestamp="2013-08-02T23:56:10Z" uid="133332" user="AMDmi3" changeset="17198430" lat="55.1438703" lon="82.8151494"/>
+    <node id="81445844" version="3" timestamp="2013-08-02T23:56:10Z" uid="133332" user="AMDmi3" changeset="17198430" lat="55.1305306" lon="82.8057091"/>
+    <node id="81445846" version="2" timestamp="2007-10-20T16:48:06Z" uid="13565" user="hadhuey" changeset="264331" lat="55.1226816" lon="82.7919002"/>
+    <node id="81445848" version="3" timestamp="2013-08-02T23:56:10Z" uid="133332" user="AMDmi3" changeset="17198430" lat="55.1086357" lon="82.782722"/>
+    <node id="81445849" version="3" timestamp="2013-08-02T23:56:10Z" uid="133332" user="AMDmi3" changeset="17198430" lat="55.0939292" lon="82.790601"/>
+    <way id="171301515" version="3" timestamp="2012-07-22T14:06:51Z" uid="651147" user="mike_lyulyukin" changeset="12433485">
+        <nd ref="1823562378"/>
+        <nd ref="1823562386"/>
+        <nd ref="1823562379"/>
+        <nd ref="1823562363"/>
+        <nd ref="1823562378"/>
+        <tag k="addr:housenumber" v="26"/>
+        <tag k="addr:street" v="улица Крупской"/>
+        <tag k="building" v="detached"/>
+        <tag k="source" v="bing"/>
+    </way>
+    <way id="171301516" version="2" timestamp="2012-07-17T15:54:15Z" uid="651147" user="mike_lyulyukin" changeset="12268444">
+        <nd ref="1823562458"/>
+        <nd ref="1823562466"/>
+        <nd ref="1823562472"/>
+        <nd ref="1823562470"/>
+        <nd ref="1823562458"/>
+        <tag k="addr:street" v="улица Ленина"/>
+        <tag k="building" v="retail"/>
+        <tag k="source" v="bing"/>
+    </way>
+    <relation id="5191841" version="1" timestamp="2015-05-25T16:38:12Z" uid="920923" user="msergeyv100" changeset="31450615">
+        <member type="way" ref="347821903" role="outer"/>
+        <member type="way" ref="347821910" role="inner"/>
+        <member type="way" ref="347821909" role="inner"/>
+        <member type="way" ref="347821906" role="inner"/>
+        <tag k="natural" v="wood"/>
+        <tag k="type" v="multipolygon"/>
+    </relation>
+    <relation id="5199921" version="1" timestamp="2015-05-27T06:13:24Z" uid="2747740" user="F1ex" changeset="31494253">
+        <member type="way" ref="52578289" role="outer"/>
+        <member type="way" ref="348843703" role="outer"/>
+        <tag k="building" v="garages"/>
+        <tag k="type" v="multipolygon"/>
+    </relation>
+</osm>

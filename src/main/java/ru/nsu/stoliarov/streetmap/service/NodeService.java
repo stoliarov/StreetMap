@@ -5,10 +5,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
+import ru.nsu.stoliarov.streetmap.generated.Osm;
 import ru.nsu.stoliarov.streetmap.model.EntriesCountByUidResponse;
 import ru.nsu.stoliarov.streetmap.model.EntriesCountByUserResponse;
 import ru.nsu.stoliarov.streetmap.model.ICountHolder;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -34,6 +39,38 @@ public class NodeService {
 	private static final String USER_ATTRIBUTE = "user";
 	
 	private static final String UID_ATTRIBUTE = "uid";
+	
+	public void persistToDb() {
+		
+		try {
+			XMLStreamReader reader = createXmlStreamReader(FILE_NAME);
+
+			if (reader == null) {
+				return;
+			}
+
+			// TODO: 17.03.20 https://dzone.com/articles/xml-unmarshalling-benchmark JAXB + STax
+			
+			// TODO: 17.03.20 здесь будет unmarshaller для каждого типа
+			JAXBContext jaxbContext = JAXBContext.newInstance(Osm.Node.class);
+			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+
+			int i = 0;
+
+			while((reader.hasNext() && i++ < 100000)) {
+
+				if (!isTagWithNameAndAttribute(reader, NODE_TAG, null)) {
+					continue;
+				}
+
+				JAXBElement<Osm.Node> nodeElement = unmarshaller.unmarshal(reader, Osm.Node.class);
+				// TODO: 17.03.20 convert and persist element
+			}
+
+		} catch (IOException | XMLStreamException | JAXBException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	public List<? extends ICountHolder> getEntriesCountByUser() {
 		
