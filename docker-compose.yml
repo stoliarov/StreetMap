@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  db:
+    image: postgres:11.7-alpine
+    container_name: db_pg_osm
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: osm
+      POSTGRES_USER: root
+    restart: always

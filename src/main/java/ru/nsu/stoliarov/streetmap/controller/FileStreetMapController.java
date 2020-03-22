@@ -5,26 +5,26 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.nsu.stoliarov.streetmap.model.ICountHolder;
-import ru.nsu.stoliarov.streetmap.service.NodeService;
+import ru.nsu.stoliarov.streetmap.service.osm.StreetMapElementService;
 
 import java.util.List;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/archive")
-public class ArchiveNodeController {
+@RequestMapping("/file")
+public class FileStreetMapController {
 	
-	private NodeService nodeService;
+	private StreetMapElementService streetMapElementService;
 	
 	@GetMapping
-	@RequestMapping("/entries-count-by-user")
+	@RequestMapping("/node-count-by-user")
 	public List<? extends ICountHolder> getEntriesCountByUser() {
-		return nodeService.getEntriesCountByUser();
+		return streetMapElementService.getEntriesCountByUser();
 	}
 	
 	@GetMapping
-	@RequestMapping("/entries-count-by-uid")
+	@RequestMapping("/node-count-by-uid")
 	public List<? extends ICountHolder> getEntriesCountByUid() {
-		return nodeService.getEntriesCountByUid();
+		return streetMapElementService.getEntriesCountByUid();
 	}
 }

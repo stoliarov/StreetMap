@@ -6,10 +6,10 @@
                     <xs:complexType>
                         <xs:simpleContent>
                             <xs:extension base="xs:string">
-                                <xs:attribute type="xs:float" name="minlon"/>
-                                <xs:attribute type="xs:float" name="minlat"/>
-                                <xs:attribute type="xs:float" name="maxlon"/>
-                                <xs:attribute type="xs:float" name="maxlat"/>
+                                <xs:attribute type="xs:double" name="minlon"/>
+                                <xs:attribute type="xs:double" name="minlat"/>
+                                <xs:attribute type="xs:double" name="maxlon"/>
+                                <xs:attribute type="xs:double" name="maxlat"/>
                                 <xs:attribute type="xs:anyURI" name="origin"/>
                             </xs:extension>
                         </xs:simpleContent>
@@ -29,14 +29,14 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute type="xs:int" name="id" use="optional"/>
-                        <xs:attribute type="xs:byte" name="version" use="optional"/>
+                        <xs:attribute type="xs:long" name="id" use="optional"/>
+                        <xs:attribute type="xs:string" name="version" use="optional"/>
                         <xs:attribute type="xs:dateTime" name="timestamp" use="optional"/>
-                        <xs:attribute type="xs:int" name="uid" use="optional"/>
+                        <xs:attribute type="xs:long" name="uid" use="optional"/>
                         <xs:attribute type="xs:string" name="user" use="optional"/>
-                        <xs:attribute type="xs:int" name="changeset" use="optional"/>
-                        <xs:attribute type="xs:float" name="lat" use="optional"/>
-                        <xs:attribute type="xs:float" name="lon" use="optional"/>
+                        <xs:attribute type="xs:long" name="changeset" use="optional"/>
+                        <xs:attribute type="xs:double" name="lat" use="optional"/>
+                        <xs:attribute type="xs:double" name="lon" use="optional"/>
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="way" maxOccurs="unbounded" minOccurs="0">
@@ -46,7 +46,7 @@
                                 <xs:complexType>
                                     <xs:simpleContent>
                                         <xs:extension base="xs:string">
-                                            <xs:attribute type="xs:int" name="ref" use="optional"/>
+                                            <xs:attribute type="xs:long" name="ref" use="optional"/>
                                         </xs:extension>
                                     </xs:simpleContent>
                                 </xs:complexType>
@@ -62,12 +62,12 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute type="xs:int" name="id" use="optional"/>
-                        <xs:attribute type="xs:byte" name="version" use="optional"/>
+                        <xs:attribute type="xs:long" name="id" use="optional"/>
+                        <xs:attribute type="xs:string" name="version" use="optional"/>
                         <xs:attribute type="xs:dateTime" name="timestamp" use="optional"/>
-                        <xs:attribute type="xs:int" name="uid" use="optional"/>
+                        <xs:attribute type="xs:long" name="uid" use="optional"/>
                         <xs:attribute type="xs:string" name="user" use="optional"/>
-                        <xs:attribute type="xs:int" name="changeset" use="optional"/>
+                        <xs:attribute type="xs:long" name="changeset" use="optional"/>
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="relation" maxOccurs="unbounded" minOccurs="0">
@@ -78,7 +78,7 @@
                                     <xs:simpleContent>
                                         <xs:extension base="xs:string">
                                             <xs:attribute type="xs:string" name="type" use="optional"/>
-                                            <xs:attribute type="xs:int" name="ref" use="optional"/>
+                                            <xs:attribute type="xs:long" name="ref" use="optional"/>
                                             <xs:attribute type="xs:string" name="role" use="optional"/>
                                         </xs:extension>
                                     </xs:simpleContent>
@@ -95,16 +95,16 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute type="xs:int" name="id" use="optional"/>
-                        <xs:attribute type="xs:byte" name="version" use="optional"/>
+                        <xs:attribute type="xs:long" name="id" use="optional"/>
+                        <xs:attribute type="xs:string" name="version" use="optional"/>
                         <xs:attribute type="xs:dateTime" name="timestamp" use="optional"/>
-                        <xs:attribute type="xs:int" name="uid" use="optional"/>
+                        <xs:attribute type="xs:long" name="uid" use="optional"/>
                         <xs:attribute type="xs:string" name="user" use="optional"/>
-                        <xs:attribute type="xs:int" name="changeset" use="optional"/>
+                        <xs:attribute type="xs:long" name="changeset" use="optional"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
-            <xs:attribute type="xs:float" name="version"/>
+            <xs:attribute type="xs:double" name="version"/>
             <xs:attribute type="xs:string" name="generator"/>
         </xs:complexType>
     </xs:element>

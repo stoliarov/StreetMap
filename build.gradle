@@ -35,6 +35,12 @@ dependencies {
     jaxb 'com.sun.xml.bind:jaxb-xjc:2.2.7-b41'
     jaxb 'com.sun.xml.bind:jaxb-impl:2.2.7-b41'
     jaxb 'javax.xml.bind:jaxb-api:2.2.7'
+
+    compile group: 'com.google.guava', name: 'guava', version: '28.2-jre'
+    compile group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'
+    compile group: 'org.flywaydb', name: 'flyway-core', version: '6.2.4'
+    compile group: 'org.springframework', name: 'spring-jdbc'
+
 }
 
 test {

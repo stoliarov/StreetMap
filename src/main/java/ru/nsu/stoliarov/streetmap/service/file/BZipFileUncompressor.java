@@ -1,4 +1,4 @@
-package ru.nsu.stoliarov.streetmap.service;
+package ru.nsu.stoliarov.streetmap.service.file;
 
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 

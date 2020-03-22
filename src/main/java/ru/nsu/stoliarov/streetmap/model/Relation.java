@@ -3,13 +3,15 @@ package ru.nsu.stoliarov.streetmap.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.time.ZonedDateTime;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Node {
+public class Relation {
 	
 	private Long id;
 	
@@ -23,7 +25,7 @@ public class Node {
 	
 	private Long changeSet;
 	
-	private Double lat;
+	protected List<RelationMember> member;
 	
-	private Double lon;
+	protected List<Pair<String, String>> tags;
 }
