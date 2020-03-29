@@ -1,4 +1,4 @@
-package ru.nsu.stoliarov.streetmap.controller;
+package ru.nsu.stoliarov.streetmap.api.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

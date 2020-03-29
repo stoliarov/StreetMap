@@ -1,24 +1,25 @@
-package ru.nsu.stoliarov.streetmap.model;
+package ru.nsu.stoliarov.streetmap.api.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.nsu.stoliarov.streetmap.model.ICountHolder;
 
 @Data
 @NoArgsConstructor
-public class EntriesCountByUserResponse implements ICountHolder {
+public class EntriesCountByUidResponse implements ICountHolder {
 	
-	private String userName;
+	private String uid;
 	
 	private Long entriesCount;
 	
 	@Override
 	public String getKey() {
-		return this.userName;
+		return this.uid;
 	}
 	
 	@Override
 	public void setKey(String key) {
-		this.userName = key;
+		this.uid = key;
 	}
 	
 	@Override

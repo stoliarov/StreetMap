@@ -4,8 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.nsu.stoliarov.streetmap.generated.Osm;
 import ru.nsu.stoliarov.streetmap.model.Relation;
+import ru.nsu.stoliarov.streetmap.model.RetentionOptions;
 import ru.nsu.stoliarov.streetmap.service.converter.RelationConverter;
-import ru.nsu.stoliarov.streetmap.service.dao.RelationDao;
+import ru.nsu.stoliarov.streetmap.service.persistence.dao.RelationDao;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -33,7 +34,7 @@ public class RelationRetentionStrategy implements IRetentionStrategy {
 	}
 	
 	@Override
-	public void saveStreetMapElement(XMLStreamReader reader) {
+	public void saveStreetMapElement(XMLStreamReader reader, RetentionOptions retentionOptions) {
 		
 		try {
 			JAXBElement<Osm.Relation> osmRelation = unmarshaller.unmarshal(reader, Osm.Relation.class);
@@ -52,4 +53,7 @@ public class RelationRetentionStrategy implements IRetentionStrategy {
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void flush() {}
 }

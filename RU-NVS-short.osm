@@ -19,37 +19,37 @@
     <node id="81445848" version="3" timestamp="2013-08-02T23:56:10Z" uid="133332" user="AMDmi3" changeset="17198430" lat="55.1086357" lon="82.782722"/>
     <node id="81445849" version="3" timestamp="2013-08-02T23:56:10Z" uid="133332" user="AMDmi3" changeset="17198430" lat="55.0939292" lon="82.790601"/>
     <way id="171301515" version="3" timestamp="2012-07-22T14:06:51Z" uid="651147" user="mike_lyulyukin" changeset="12433485">
-        <nd ref="1823562378"/>
-        <nd ref="1823562386"/>
-        <nd ref="1823562379"/>
-        <nd ref="1823562363"/>
-        <nd ref="1823562378"/>
+        <nd ref="32521222"/>
+        <nd ref="81445841"/>
+        <nd ref="81445843"/>
+        <nd ref="81445846"/>
+        <nd ref="32521222"/>
         <tag k="addr:housenumber" v="26"/>
         <tag k="addr:street" v="улица Крупской"/>
         <tag k="building" v="detached"/>
         <tag k="source" v="bing"/>
     </way>
     <way id="171301516" version="2" timestamp="2012-07-17T15:54:15Z" uid="651147" user="mike_lyulyukin" changeset="12268444">
-        <nd ref="1823562458"/>
-        <nd ref="1823562466"/>
-        <nd ref="1823562472"/>
-        <nd ref="1823562470"/>
-        <nd ref="1823562458"/>
+        <nd ref="81445846"/>
+        <nd ref="81445848"/>
+        <nd ref="81445849"/>
+        <nd ref="81445841"/>
+        <nd ref="81445849"/>
         <tag k="addr:street" v="улица Ленина"/>
         <tag k="building" v="retail"/>
         <tag k="source" v="bing"/>
     </way>
     <relation id="5191841" version="1" timestamp="2015-05-25T16:38:12Z" uid="920923" user="msergeyv100" changeset="31450615">
-        <member type="way" ref="347821903" role="outer"/>
-        <member type="way" ref="347821910" role="inner"/>
-        <member type="way" ref="347821909" role="inner"/>
-        <member type="way" ref="347821906" role="inner"/>
+        <member type="way" ref="171301515" role="outer"/>
+        <member type="way" ref="171301516" role="inner"/>
+        <member type="node" ref="81445841" role="inner"/>
+        <member type="node" ref="81445843" role="inner"/>
         <tag k="natural" v="wood"/>
         <tag k="type" v="multipolygon"/>
     </relation>
     <relation id="5199921" version="1" timestamp="2015-05-27T06:13:24Z" uid="2747740" user="F1ex" changeset="31494253">
-        <member type="way" ref="52578289" role="outer"/>
-        <member type="way" ref="348843703" role="outer"/>
+        <member type="way" ref="171301515" role="outer"/>
+        <member type="way" ref="171301516" role="outer"/>
         <tag k="building" v="garages"/>
         <tag k="type" v="multipolygon"/>
     </relation>

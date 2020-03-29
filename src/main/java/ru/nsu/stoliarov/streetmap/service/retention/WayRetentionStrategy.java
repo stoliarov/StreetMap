@@ -3,9 +3,10 @@ package ru.nsu.stoliarov.streetmap.service.retention;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.nsu.stoliarov.streetmap.generated.Osm;
+import ru.nsu.stoliarov.streetmap.model.RetentionOptions;
 import ru.nsu.stoliarov.streetmap.model.Way;
 import ru.nsu.stoliarov.streetmap.service.converter.WayConverter;
-import ru.nsu.stoliarov.streetmap.service.dao.WayDao;
+import ru.nsu.stoliarov.streetmap.service.persistence.dao.WayDao;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -33,7 +34,7 @@ public class WayRetentionStrategy implements IRetentionStrategy {
 	}
 	
 	@Override
-	public void saveStreetMapElement(XMLStreamReader reader) {
+	public void saveStreetMapElement(XMLStreamReader reader, RetentionOptions retentionOptions) {
 		
 		try {
 			JAXBElement<Osm.Way> osmWay = unmarshaller.unmarshal(reader, Osm.Way.class);
@@ -52,4 +53,7 @@ public class WayRetentionStrategy implements IRetentionStrategy {
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void flush() {}
 }

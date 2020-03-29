@@ -21,6 +21,7 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
@@ -29,17 +30,18 @@ dependencies {
     }
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
-    compile group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    implementation group: 'org.apache.commons', name: 'commons-compress', version: '1.20'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.0'
+    implementation group: 'com.google.guava', name: 'guava', version: '28.2-jre'
 
     jaxb 'com.sun.xml.bind:jaxb-xjc:2.2.7-b41'
     jaxb 'com.sun.xml.bind:jaxb-impl:2.2.7-b41'
     jaxb 'javax.xml.bind:jaxb-api:2.2.7'
 
-    compile group: 'com.google.guava', name: 'guava', version: '28.2-jre'
-    compile group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'
-    compile group: 'org.flywaydb', name: 'flyway-core', version: '6.2.4'
-    compile group: 'org.springframework', name: 'spring-jdbc'
+    implementation group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'
+    implementation group: 'org.flywaydb', name: 'flyway-core', version: '6.2.4'
+    implementation group: 'org.springframework', name: 'spring-jdbc'
 
 }
 

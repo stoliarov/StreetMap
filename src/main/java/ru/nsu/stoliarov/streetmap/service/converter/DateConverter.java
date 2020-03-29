@@ -21,7 +21,7 @@ public class DateConverter {
 				fromDateTime.getHour(),
 				fromDateTime.getMinute(),
 				fromDateTime.getSecond(),
-				fromDateTime.getMillisecond(),
+				0,
 				fromDateTime.getTimeZone(0).toZoneId()
 		);
 	}
