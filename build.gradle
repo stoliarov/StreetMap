@@ -21,6 +21,7 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
@@ -39,7 +40,7 @@ dependencies {
     jaxb 'com.sun.xml.bind:jaxb-impl:2.2.7-b41'
     jaxb 'javax.xml.bind:jaxb-api:2.2.7'
 
-    implementation group: 'postgresql', name: 'postgresql', version: '9.1-901-1.jdbc4'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.9'
     implementation group: 'org.flywaydb', name: 'flyway-core', version: '6.2.4'
     implementation group: 'org.springframework', name: 'spring-jdbc'
 

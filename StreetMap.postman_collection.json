@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "58eab1cd-641d-440d-8630-bd1db98af614",
+		"name": "StreetMap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Get count by user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/file/node-count-by-user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"file",
+								"node-count-by-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get count by key",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/file/node-count-by-uid",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"file",
+								"node-count-by-uid"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DB",
+			"item": [
+				{
+					"name": "Node",
+					"item": [
+						{
+							"name": "Get node",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/db/node/27503928",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"node",
+										"27503928"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add node",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"6787\",\n    \"version\": \"653\",\n    \"dateTime\": \"2020-01-29T11:42:06+06:00\",\n    \"uid\": 900998,\n    \"userName\": \"Anton\",\n    \"changeSet\": 45226534,\n    \"lat\": 56.0282215,\n    \"lon\": 35.9234476\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/db/node/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"node",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete node",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/db/node/6787",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"node",
+										"6787"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update node",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"6787\",\n    \"version\": \"8888888888888888888\",\n    \"dateTime\": \"2020-01-29T11:42:06+06:00\",\n    \"uid\": 900998,\n    \"userName\": \"Anton\",\n    \"changeSet\": 45226534,\n    \"lat\": 56.0282215,\n    \"lon\": 35.9234476\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/db/node/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"node",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Way",
+					"item": [
+						{
+							"name": "Get way",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/db/way/171301515",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"way",
+										"171301515"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add way",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 123,\n    \"version\": \"3\",\n    \"dateTime\": \"2012-07-22T14:06:51+07:00\",\n    \"uid\": 555,\n    \"userName\": \"mike_lyulyukin\",\n    \"changeSet\": 999999999,\n    \"nodeIds\": [\n        27503928,\n        81445846,\n        32521222\n    ],\n    \"tags\": [\n        {\n            \"key_1\": \"value_1\"\n        },\n        {\n            \"key_2\": \"value_2\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/db/way/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"way",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete way",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/db/way/123",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"way",
+										"123"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update way",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 123,\n    \"version\": \"3\",\n    \"dateTime\": \"2012-07-22T14:06:51+07:00\",\n    \"uid\": 789,\n    \"userName\": \"mike_lyulyukin\",\n    \"changeSet\": 999999999,\n    \"nodeIds\": [\n        27503928,\n        32521222,\n        81445841,\n        81445841\n    ],\n    \"tags\": [\n    \t{\n            \"key_2\": \"value_2\"\n        },\n        {\n            \"key_8\": \"value_8\"\n        },\n        {\n            \"key_5\": \"value_5\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/db/way/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"way",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Relation",
+					"item": [
+						{
+							"name": "Get relation",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/db/relation/5199921",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"relation",
+										"5199921"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add relation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 123,\n    \"version\": \"1\",\n    \"dateTime\": \"2015-05-27T06:13:24+06:00\",\n    \"uid\": 78877887,\n    \"userName\": \"Ivan Ivanov\",\n    \"changeSet\": 54454,\n    \"member\": [\n        {\n            \"type\": \"NODE\",\n            \"ref\": 81445846,\n            \"role\": \"OUTER\"\n        },\n        {\n            \"type\": \"WAY\",\n            \"ref\": 171301516,\n            \"role\": \"OUTER\"\n        }\n    ],\n    \"tags\": [\n        {\n            \"firstKey\": \"firstValue\"\n        },\n        {\n            \"someKey\": \"someValue\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/db/relation/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"relation",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete relation",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/db/relation/123",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"relation",
+										"123"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update relation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 123,\n    \"version\": \"1\",\n    \"dateTime\": \"2015-05-27T06:13:24+06:00\",\n    \"uid\": 78877887,\n    \"userName\": \"Ivan Ivanov\",\n    \"changeSet\": 54454,\n    \"member\": [\n        {\n            \"type\": \"NODE\",\n            \"ref\": 32521222,\n            \"role\": \"INNER\"\n        },\n        {\n            \"type\": \"WAY\",\n            \"ref\": 171301515,\n            \"role\": \"OUTER\"\n        }\n    ],\n    \"tags\": [\n        {\n            \"newKey\": \"newValue\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/db/relation/update",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"db",
+										"relation",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "DELETE All",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/db/clear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"db",
+								"clear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Persist short file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"saveMode\": \"PREPARED_STATEMENT\",\n\t\"batchSize\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/db/persist-short",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"db",
+								"persist-short"
+							]
+						},
+						"description": "Загружает в БД короткий XML файл."
+					},
+					"response": []
+				},
+				{
+					"name": "Persist huge file (bzip archive)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"saveMode\": \"PREPARED_STATEMENT\",\n\t\"batchSize\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/db/persist-archive",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"db",
+								"persist-archive"
+							]
+						},
+						"description": "Загружает в БД короткий XML файл."
+					},
+					"response": []
+				},
+				{
+					"name": "Speed test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"batchSize\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/db/speed-test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"db",
+								"speed-test"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

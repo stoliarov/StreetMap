@@ -1,4 +1,5 @@
-create table if not exists node (
+create table if not exists node
+(
     id         bigint primary key,
     version    varchar(255),
     date_time  timestamp with time zone,
@@ -9,7 +10,8 @@ create table if not exists node (
     lon        double precision
 );
 
-create table if not exists way (
+create table if not exists way
+(
     id         bigint primary key,
     version    varchar(255),
     date_time  timestamp with time zone,
@@ -18,8 +20,8 @@ create table if not exists way (
     change_set bigint
 );
 
-
-create table if not exists relation (
+create table if not exists relation
+(
     id         bigint primary key,
     version    varchar(255),
     date_time  timestamp with time zone,
@@ -28,7 +30,8 @@ create table if not exists relation (
     change_set bigint
 );
 
-create table if not exists node_of_way (
+create table if not exists node_of_way
+(
     id      bigint primary key,
     way_id  bigint,
     node_id bigint,
@@ -42,7 +45,8 @@ create table if not exists node_of_way (
         on update cascade
 );
 
-create table if not exists way_tag (
+create table if not exists way_tag
+(
     id     bigint primary key,
     key_   varchar(255),
     value  varchar(255),
@@ -53,7 +57,8 @@ create table if not exists way_tag (
         on update cascade
 );
 
-create table if not exists relation_tag (
+create table if not exists relation_tag
+(
     id          bigint primary key,
     key_        varchar(255),
     value       varchar(255),
@@ -64,11 +69,13 @@ create table if not exists relation_tag (
         on update cascade
 );
 
-create table if not exists relation_member (
+create table if not exists relation_member
+(
     id          bigint primary key,
     type        varchar(255),
     role        varchar(255),
     relation_id bigint,
+    ref         bigint,
 
     foreign key (relation_id) references relation (id)
         on delete cascade

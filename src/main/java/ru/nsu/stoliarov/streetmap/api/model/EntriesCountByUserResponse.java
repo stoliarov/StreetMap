@@ -2,7 +2,6 @@ package ru.nsu.stoliarov.streetmap.api.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.nsu.stoliarov.streetmap.model.ICountHolder;
 
 @Data
 @NoArgsConstructor

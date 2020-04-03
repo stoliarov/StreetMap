@@ -7,38 +7,35 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.nsu.stoliarov.streetmap.api.model.SpeedTestRequest;
-import ru.nsu.stoliarov.streetmap.model.RetentionOptions;
 import ru.nsu.stoliarov.streetmap.api.model.SpeedTestResponse;
-import ru.nsu.stoliarov.streetmap.service.osm.StreetMapElementService;
+import ru.nsu.stoliarov.streetmap.retention.model.RetentionOptions;
+import ru.nsu.stoliarov.streetmap.api.model.StatusHolder;
+import ru.nsu.stoliarov.streetmap.service.StreetMapElementService;
 
 @RestController
 @AllArgsConstructor
 @RequestMapping("/db")
 public class DbStreetMapController {
-	
-	private StreetMapElementService streetMapElementService;
 
-	@PostMapping
-	@RequestMapping("/persist-short")
-	public Boolean persistShortFileToDb(@RequestBody RetentionOptions retentionOptions) {
-		return streetMapElementService.persistToDbShortFile(retentionOptions);
-	}
+    private StreetMapElementService streetMapElementService;
 
-	@PostMapping
-	@RequestMapping("/persist-archive")
-	public Boolean persistHugeFileToDb(@RequestBody RetentionOptions retentionOptions) {
-		return streetMapElementService.persistToDbHugeFile(retentionOptions);
-	}
+    @PostMapping("/persist-short")
+    public StatusHolder persistShortFileToDb(@RequestBody RetentionOptions retentionOptions) {
+        return streetMapElementService.persistToDbShortFile(retentionOptions);
+    }
 
-	@DeleteMapping
-	@RequestMapping("/clear")
-	public Boolean clearDb() {
-		return streetMapElementService.clearDb();
-	}
+    @PostMapping("/persist-archive")
+    public StatusHolder persistHugeFileToDb(@RequestBody RetentionOptions retentionOptions) {
+        return streetMapElementService.persistToDbHugeFile(retentionOptions);
+    }
 
-	@PostMapping
-	@RequestMapping("/speed-test")
-	public SpeedTestResponse testSpeed(@RequestBody SpeedTestRequest request) {
-		return streetMapElementService.testSpeed(request);
-	}
+    @DeleteMapping("/clear")
+    public StatusHolder clearDb() {
+        return streetMapElementService.clearDb();
+    }
+
+    @PostMapping("/speed-test")
+    public SpeedTestResponse testSpeed(@RequestBody SpeedTestRequest request) {
+        return streetMapElementService.testSpeed(request);
+    }
 }

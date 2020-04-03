@@ -11,7 +11,7 @@ public class RelationMember {
 	
 	private RelationMemberType type;
 	
-	private Long refId;
+	private Long ref;
 	
 	private RelationMemberRole role;
 }
